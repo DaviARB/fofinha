@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naelly</title>
+
+<style>
+     *{
+        padding: 0;
+        border: 0;
+        margin: 0;
+     }
+    body{
+        background-color: rgb(0, 162, 255);
+    }
+    .painel{
+       
+        border: solid;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: 10%;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         margin-top: 100px;
+    }
+#sim{
+    height: 40px;
+    width: 60px;
+    background-color: rgb(0, 162, 255);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    margin-left: -60px;
+}
+#nao{
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    background-color: rgb(0, 162, 255);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    margin-left: 10px;
+}
+
+</style>
+
+</head>
+<body>
+    
+<div class="painel">
+    <h1>Boa noite Senhorita</h1>
+
+ <img src="https://imagens.net.br/wp-content/uploads/2024/07/encante-se-gifs-de-ursinho-para-derreter-seu-coracao-0.gif" alt="">
+
+    <h2>aceitar sair comigo??</h2>
+   
+<A href="https://youtu.be/J7j1WneusdY?si=GXy91yg0dLqb5Sjv"><button id="sim"> Sim! </button></A>
+<button onmouseover="fuja()" id="nao"> Não! </button>
+
+
+</div>
+<script>
+
+function fuja(){
+    var botaonao = document.getElementById("nao")
+
+    var larguraJanela = window.innerWidth;
+    var alturaJanela = window.innerHeight;
+
+    var maxX = larguraJanela - botaonao.offsetWidth;
+    var maxY = alturaJanela - botaonao.offsetHeight;
+
+    var aleatorioX = Math.floor(Math.random() * maxX);
+    var aleatorioY = Math.floor(Math.random() * maxY);
+
+    botaonao.style.left = aleatorioX + "px";
+    botaonao.style.top = aleatorioY + "px";
+
+}
+
+</script>
+
+
+</body>
+</html>
